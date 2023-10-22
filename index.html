@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Joke Generator</title>
+</head>
+<body>
+    <h1>Random Joke Generator</h1>
+    <p id="joke"></p>
+    <button onclick="getRandomJoke()">Get Joke</button>
+    <script>
+        const jokes = [
+            "Why did the scarecrow win an award? Because he was outstanding in his field!",
+            "What do you call a fish with no eyes? Fsh!",
+            "I used to play piano by ear, but now I use my hands.",
+            "How do you organize a space party? You 'planet'!",
+            "Parallel lines have so much in common. It's a shame they'll never meet.",
+        ];
+
+        function getRandomJoke() {
+            const jokeElement = document.getElementById("joke");
+            const randomIndex = Math.floor(Math.random() * jokes.length);
+            jokeElement.textContent = jokes[randomIndex];
+        }
+    </script>
+</body>
+</html>
